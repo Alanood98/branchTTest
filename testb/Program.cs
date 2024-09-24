@@ -57,3 +57,35 @@ namespace test2
                                 Console.WriteLine("The factorial of {number} is: {factorial}");
                             }
                             break;
+                        case 2:
+
+                            IsPrime();
+                            static void IsPrime()
+                            {
+                                Console.WriteLine("Enter a number: ");
+                                int number = int.Parse(Console.ReadLine());
+
+                                bool isPrime = true;
+                                if (number <= 1)
+                                {
+                                    isPrime = false;
+                                }
+                                else
+                                {
+                                    for (int i = 2; i <= number; i++)
+                                    {
+                                        if (number % i == 0)
+                                        {
+                                            isPrime = false;
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+                    }
+
+                    //Console.WriteLine(isPrime ?"{number} is a prime number." : < span class="math-inline">"{number} is not a prime number.");
+                    if (isPrime == true)
+                    {
+                        Console.WriteLine("{number} is prime");
+                         
